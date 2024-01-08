@@ -21,7 +21,7 @@ app.use(cookieParser())
 app.get('/ping',(req,res)=>{
     res.send("/pong")
 })
-app.use('api/v1/user',userRoutes)
+app.use('/api/v1/user',userRoutes)
 
 app.all('*',(req,res)=>{
     res.status(404).send("OOPS! 404 page not found")
