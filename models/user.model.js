@@ -1,6 +1,6 @@
 import { Schema ,model } from "mongoose";
 import bcrypt from 'bcryptjs';
-import JWt from 'jsonwebtoken'
+import JWT from 'jsonwebtoken'
 const userSchema = new Schema(
     {
         fullname:{
@@ -65,7 +65,7 @@ userSchema.pre('save', async function(next){
 
 userSchema.methods ={
     generateJWTToken: async function(){
-        return await JWt.sign(
+        return await JWT.sign(
             {id:this._id,email:this.email,role:this.role,subscription:this.subscription},
             process.env.SECRET,
             {expiresIn:process.env.JWT_EXPIRY},
