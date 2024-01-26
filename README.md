@@ -55,6 +55,14 @@ This is the backend for a Learning Management System (LMS) designed to handle us
 - **nodemon**: Monitors for changes and automatically restarts the server during development.
 - **razorpay**: Payment gateway integration for handling subscriptions.
 
+## Testing with Thunder Client
+
+[Thunder Client](https://www.thunderclient.io/) is a powerful API testing tool for Visual Studio Code. You can use Thunder Client to test the API endpoints of this backend.
+
+1. Install Thunder Client extension in Visual Studio Code.
+2. Open Thunder Client and create a new HTTP request collection.
+3. Start testing the API endpoints by sending requests to the corresponding URLs.
+
 ## Installation
 
 1. Clone the repository.
