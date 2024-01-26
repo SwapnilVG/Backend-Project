@@ -9,6 +9,8 @@ import morgan from "morgan";
 import userRoutes from './routers/user.routers.js'
 import courseRoutes from './routers/course.routers.js'
 import errorMiddleware from "./middleware/error.middleware.js";
+import paymentRoutes from './routers/payment.routers.js';
+import miscRoutes from './routers/miscellaneous.routes.js'
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +27,8 @@ app.get('/ping',(req,res)=>{
 
 app.use('/api/v1/user',userRoutes)
 app.use('/api/v1/courses',courseRoutes)
+app.use('/api/v1/payments',paymentRoutes)
+app.use('/api/v1', miscRoutes);
 
 app.all('*',(req,res)=>{
     res.status(404).send("OOPS! 404 page not found")
