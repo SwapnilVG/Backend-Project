@@ -16,6 +16,7 @@ router.route('/:courseId/lectures/:lectureId')
 
    
 // router.get('/:id',getLecturesByCourseId);
+
 router.route('/:id')
    .get(isLoggedIn,authorizeSubscriber,getLecturesByCourseId)
    .put(isLoggedIn,authorizedRoles("ADMIN"),updateCourse)
