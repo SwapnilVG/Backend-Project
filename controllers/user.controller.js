@@ -285,7 +285,7 @@ const updateUser = async (req,res,next) =>{
 
             }
         } catch (error) {
-            new AppError(error || 'File not uplaoded , please try again')
+             return next(new AppError(error || 'File not uploaded , please try again'))
         }
 
     }

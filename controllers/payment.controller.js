@@ -135,7 +135,7 @@ const cancelSubscription = async (req,res,next) =>{
 
         res.status(200).json({
             success: true,
-            message: 'Subscription canceled successfully'
+            message: 'Subscription cancelled successfully'
         })
         
     } catch (error) {
